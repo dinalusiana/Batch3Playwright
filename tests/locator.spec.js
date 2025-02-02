@@ -44,4 +44,19 @@ test('Testcase Login', async ({ page }) => {
 
   const buttonContinue = page.locator('#continue');
   await buttonContinue.click();
+
+  const checkoutOverview = page.locator('text=Checkout: Overview');
+  await checkoutOverview.click();
+
+  const paymentInformation = page.locator('text=Payment Information:');
+  await paymentInformation.click();
+
+  const shippingInformation = page.locator('text=Shipping Information:');
+  await shippingInformation.click();
+
+  const priceTotal = page.locator('text=Price Total');
+  await priceTotal.click();
+
+  const buttonFinish = page.locator('#finish');
+  await buttonFinish.click();
 });
