@@ -1,5 +1,8 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
+// import loginActions from './pmo/object/loginAction';
+// @ts-ignore
+const { default: loginActions } = require('../tests/pmo/object/loginAction')
 
 test('Testcase Login', async ({ page }) => {
   await page.goto('https://www.saucedemo.com/');
@@ -44,4 +47,29 @@ test('Testcase Login', async ({ page }) => {
 
   const buttonContinue = page.locator('#continue');
   await buttonContinue.click();
+
+  const checkoutOverview = page.locator('text=Checkout: Overview');
+  await checkoutOverview.click();
+
+  const paymentInformation = page.locator('text=Payment Information:');
+  await paymentInformation.click();
+
+  const shippingInformation = page.locator('text=Shipping Information:');
+  await shippingInformation.click();
+
+  const priceTotal = page.locator('text=Price Total');
+  await priceTotal.click();
+
+  const buttonFinish = page.locator('#finish');
+  await buttonFinish.click();
+});
+
+test('login with pmo', async ({ page }) => {
+  const loginObj = new loginActions(page);
+  await loginObj.goto();
+  await loginObj.inputLogin();
+  await loginObj.addListProduct();
+  await loginObj.checkoutList();
+  await loginObj.checkoutInformation();
+  await loginObj.checkoutOverview();
 });
