@@ -72,4 +72,5 @@ test('login with pmo', async ({ page }) => {
   await loginObj.checkoutList();
   await loginObj.checkoutInformation();
   await loginObj.checkoutOverview();
+  await loginObj.checkoutComplete();
 });

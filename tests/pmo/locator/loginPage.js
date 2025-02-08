@@ -27,5 +27,8 @@ export default class loginPage {
     textShippingInformation = '#checkout_summary_container > div > div.summary_info > div:nth-child(3)';
     textPriceTotal = '#checkout_summary_container > div > div.summary_info > div:nth-child(5)';
     textTotal = '#checkout_summary_container > div > div.summary_info > div.summary_total_label';
-    clickButtonFinish = '#finish'
+    clickButtonFinish = '#finish';
+    textCheckoutComplete = '#header_container > div.header_secondary_container > span';
+    textThankYou = '#checkout_complete_container > h2';
+    clickButtonBackHome = '#back-to-products';
 }

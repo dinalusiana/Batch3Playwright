@@ -38,6 +38,9 @@ export default class loginActions {
         this.textPriceTotal = page.locator(this.loginPage.textPriceTotal);
         this.textTotal = page.locator(this.loginPage.textTotal);
         this.clickButtonFinish = page.locator(this.loginPage.clickButtonFinish);
+        this.textCheckoutComplete = page.locator(this.loginPage.textCheckoutComplete);
+        this.textThankYou = page.locator(this.loginPage.textThankYou);
+        this.clickButtonBackHome = page.locator(this.loginPage.clickButtonBackHome);
     }
 
     async goto() {
@@ -91,5 +94,11 @@ export default class loginActions {
         await expect(this.textPriceTotal).toHaveText('Price Total');
         await expect(this.textTotal).toHaveText('Total: $43.18');
         await this.clickButtonFinish.click();
+    }
+
+    async checkoutComplete() {
+        await expect(this.textCheckoutComplete).toHaveText('Checkout: Complete!')
+        await expect(this.textThankYou).toHaveText('Thank you for your order!');
+        await this.clickButtonBackHome.click();
     }
 }
