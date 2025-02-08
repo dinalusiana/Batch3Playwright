@@ -1,0 +1,31 @@
+export default class loginPage {
+    inputUsername = '#user-name';
+    inputPassword = '#password';
+    clickButtonLogin = '#login-button';
+    textSwagLab = '#header_container > div.primary_header > div.header_label > div';
+    textProduct = '#header_container > div.header_secondary_container > span';
+    textSauceLabsBackpack = '#item_4_title_link > div';
+    clickAddSaucelabsBackpack = '#add-to-cart-sauce-labs-backpack';
+    textSauceLabsBikeLight = '#item_0_title_link > div';
+    clickAddSauceLabsBikeLight = '#add-to-cart-sauce-labs-bike-light';
+    clickCheckoutList = '#shopping_cart_container > a';
+    textYoutCart = '#header_container > div.header_secondary_container > span';
+    textQty = '#cart_contents_container > div > div.cart_list > div.cart_quantity_label';
+    textDescription = '#cart_contents_container > div > div.cart_list > div.cart_desc_label';
+    textSauceLabsBackpackList = '#item_4_title_link > div';
+    totalSauceLabsBackpack = '#cart_contents_container > div > div.cart_list > div:nth-child(3) > div.cart_item_label > div.item_pricebar > div';
+    textSauceLabsBikeLightList = '#item_0_title_link > div';
+    totalSauceLabsBikeLight = '#cart_contents_container > div > div.cart_list > div:nth-child(4) > div.cart_item_label > div.item_pricebar > div';
+    clickButtonCheckout = '#checkout';
+    textCheckoutInformation = '#header_container > div.header_secondary_container > span';
+    inputFirstName = '#first-name';
+    inputLastName = '#last-name';
+    inputPostalCode = '#postal-code';
+    clickButtonContinue = '#continue';
+    textCheckoutOverview = '#header_container > div.header_secondary_container > span';
+    textPaymentInformation = '#checkout_summary_container > div > div.summary_info > div:nth-child(1)';
+    textShippingInformation = '#checkout_summary_container > div > div.summary_info > div:nth-child(3)';
+    textPriceTotal = '#checkout_summary_container > div > div.summary_info > div:nth-child(5)';
+    textTotal = '#checkout_summary_container > div > div.summary_info > div.summary_total_label';
+    clickButtonFinish = '#finish'
+}
